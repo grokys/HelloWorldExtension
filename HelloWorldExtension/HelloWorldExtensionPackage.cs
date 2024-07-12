@@ -15,6 +15,8 @@ public sealed class HelloWorldExtensionPackage : ToolkitPackage
 {
     protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
     {
+        var languageFactory = new HelloWorldLanguageFactory(this);
+        RegisterEditorFactory(languageFactory);
         await JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
     }
 }
