@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 
 namespace HelloWorldExtension;
+
 [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
 [InstalledProductRegistration(Vsix.Name, Vsix.Description, Vsix.Version)]
 [ProvideMenuResource("Menus.ctmenu", 1)]
